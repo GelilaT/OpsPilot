@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f0f4ff;
+  --surface: #ffffff;
+  --text: #1c1c1a;
+  --muted: #6b6b66;
+  --border: #e4e4df;
+  --accent: #5be49b;
+  --accent-text: #1c1c1a;
+  --positive: #1d7a46;
+  --negative: #b42318;
+  --warning: #a15c07;
+  --info: #1d5fa8;
+  --ai: #6b3fb8;
+  --chip: #efefea;
+  --negative-bg: #fdecea;
+  --positive-bg: #e6f4ec;
+  --warning-bg: #fdf3e2;
+  --info-bg: #e8f0fb;
+  --ai-bg: #f1ebfb;
+}
+
+:root[data-theme="dark"] {
+  --bg: #141413;
+  --surface: #1c1c1a;
+  --text: #ececea;
+  --muted: #a1a19b;
+  --border: #2e2e2b;
+  --accent: #5be49b;
+  --accent-text: #1c1c1a;
+  --positive: #5cc488;
+  --negative: #f0806f;
+  --warning: #e3a64a;
+  --info: #7fb3f0;
+  --ai: #c3a4f5;
+  --chip: #262624;
+  --negative-bg: #3a1d19;
+  --positive-bg: #15301f;
+  --warning-bg: #36280f;
+  --info-bg: #162a42;
+  --ai-bg: #2a1f3d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    --bg: #141413;
+    --surface: #1c1c1a;
+    --text: #ececea;
+    --muted: #a1a19b;
+    --border: #2e2e2b;
+    --accent: #5be49b;
+    --accent-text: #1c1c1a;
+    --positive: #5cc488;
+    --negative: #f0806f;
+    --warning: #e3a64a;
+    --info: #7fb3f0;
+    --ai: #c3a4f5;
+    --chip: #262624;
+    --negative-bg: #3a1d19;
+    --positive-bg: #15301f;
+    --warning-bg: #36280f;
+    --info-bg: #162a42;
+    --ai-bg: #2a1f3d;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+@layer components {
+  .input {
+    @apply mt-1 block w-full rounded-md border px-3 py-2 text-sm outline-none;
+    border-color: var(--border);
+    background: var(--surface);
+    color: var(--text);
+  }
+  .input:focus {
+    border-color: var(--accent);
+  }
+  .btn-primary {
+    @apply rounded-md px-4 py-2 text-sm font-medium disabled:opacity-60;
+    background: var(--accent);
+    color: var(--accent-text);
+  }
+  .btn-secondary {
+    @apply rounded-md border px-4 py-2 text-sm font-medium disabled:opacity-60;
+    border-color: var(--border);
+    background: var(--surface);
+    color: var(--text);
+  }
+  .btn-danger {
+    @apply rounded-md px-4 py-2 text-sm font-medium disabled:opacity-60;
+    background: var(--negative);
+    color: #fff;
+  }
+  .btn-sm {
+    @apply px-2.5 py-1 text-xs;
+  }
+  .skeleton {
+    @apply animate-pulse rounded-lg;
+    background: var(--border);
+  }
+}
