@@ -9,10 +9,11 @@ COPY alembic.ini ./
 COPY migrations ./migrations
 COPY app ./app
 COPY fixtures ./fixtures
+COPY start.sh ./
 RUN useradd --uid 10001 --no-create-home opspilot
 USER opspilot
 EXPOSE 8080
-# api (default):   uvicorn on :8080 (Cloud Run)
+# api (default):   start.sh -> uvicorn on $PORT (plus the worker when RUN_WORKER=1)
 # worker:          procrastinate --app=app.workers.app.app worker
 # migrate:         alembic upgrade head
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8080} --proxy-headers --forwarded-allow-ips='*'"]
+CMD ["sh", "start.sh"]
