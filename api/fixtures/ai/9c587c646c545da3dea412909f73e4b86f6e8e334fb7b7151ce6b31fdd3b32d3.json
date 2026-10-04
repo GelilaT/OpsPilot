@@ -1,0 +1,133 @@
+{
+ "sha256": "9c587c646c545da3dea412909f73e4b86f6e8e334fb7b7151ce6b31fdd3b32d3",
+ "filename": "NK-YRK-dairy-SI-21595.pdf",
+ "classification": {
+  "document_type": "invoice",
+  "confidence": 0.97,
+  "multiple_documents": false,
+  "reason": "Supplier tax invoice with line items, VAT and total"
+ },
+ "extraction": {
+  "supplier": {
+   "name": "Wharfedale Dairy",
+   "vat_number": "GB701445290",
+   "address": "Ilkley Road, Burley LS29 7DE"
+  },
+  "invoice_number": "SI-21595",
+  "invoice_date": "2026-10-02",
+  "delivery_date": "2026-10-02",
+  "due_date": "2026-11-01",
+  "po_reference": "PO-NK-YRK-261002-WHD",
+  "currency": "GBP",
+  "lines": [
+   {
+    "description": "Whole milk",
+    "supplier_sku": "WD1007",
+    "quantity": "31",
+    "unit": "l",
+    "pack_size": "2 x 2l",
+    "unit_price": "0.94",
+    "line_total": "29.14",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Oat milk, barista",
+    "supplier_sku": "WD1014",
+    "quantity": "12",
+    "unit": "l",
+    "pack_size": "6 x 1l",
+    "unit_price": "1.8",
+    "line_total": "21.60",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Double cream",
+    "supplier_sku": "WD1021",
+    "quantity": "1",
+    "unit": "l",
+    "pack_size": "2l tub",
+    "unit_price": "4.21",
+    "line_total": "4.21",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Unsalted butter",
+    "supplier_sku": "WD1028",
+    "quantity": "1",
+    "unit": "kg",
+    "pack_size": "10 x 250g",
+    "unit_price": "7.68",
+    "line_total": "7.68",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Mature cheddar",
+    "supplier_sku": "WD1035",
+    "quantity": "4",
+    "unit": "kg",
+    "pack_size": "2.5kg block",
+    "unit_price": "8.28",
+    "line_total": "33.12",
+    "vat_rate": "0"
+   },
+   {
+    "description": "American cheese slices",
+    "supplier_sku": "WD1042",
+    "quantity": "1",
+    "unit": "pack",
+    "pack_size": "112 slices",
+    "unit_price": "12.15",
+    "line_total": "12.15",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Mozzarella, grated",
+    "supplier_sku": "WD1049",
+    "quantity": "1",
+    "unit": "kg",
+    "pack_size": "2kg bag",
+    "unit_price": "7.66",
+    "line_total": "7.66",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Halloumi",
+    "supplier_sku": "WD1056",
+    "quantity": "3",
+    "unit": "kg",
+    "pack_size": "1kg block",
+    "unit_price": "11.37",
+    "line_total": "34.11",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Greek yoghurt",
+    "supplier_sku": "WD1063",
+    "quantity": "1",
+    "unit": "kg",
+    "pack_size": "1kg tub",
+    "unit_price": "4.32",
+    "line_total": "4.32",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Vanilla ice cream",
+    "supplier_sku": "WD1070",
+    "quantity": "10",
+    "unit": "l",
+    "pack_size": "5l tub",
+    "unit_price": "3.06",
+    "line_total": "30.60",
+    "vat_rate": "0"
+   }
+  ],
+  "subtotal": "184.59",
+  "vat_total": "0.00",
+  "total": "184.59",
+  "field_confidence": {
+   "invoice_number": 0.99,
+   "total": 0.99,
+   "lines": 0.97
+  }
+ }
+}

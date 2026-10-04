@@ -1,0 +1,82 @@
+{
+ "sha256": "b96f1f800a2c65d99437c7df3600cc44af874dad2a8a9f669bd44abc14b881c8",
+ "filename": "mixed-invoice-inr.webp",
+ "source": "hand-recorded from the document",
+ "classification": {
+  "document_type": "invoice",
+  "confidence": 0.96,
+  "multiple_documents": false,
+  "reason": "Single tax invoice with invoice number, line items, GST and total"
+ },
+ "extraction": {
+  "supplier": {
+   "name": "Priya",
+   "vat_number": "29AAJCR7259L1ZI",
+   "address": "Surat, Karnataka, India"
+  },
+  "invoice_number": "INV-123456",
+  "invoice_date": "2024-12-12",
+  "delivery_date": null,
+  "due_date": "2025-01-12",
+  "po_reference": null,
+  "currency": "INR",
+  "lines": [
+   {
+    "description": "40\" LED TV (Model: hbh-19)",
+    "supplier_sku": null,
+    "quantity": "2",
+    "unit": null,
+    "pack_size": null,
+    "unit_price": "25000.00",
+    "line_total": "50000.00",
+    "vat_rate": "18"
+   },
+   {
+    "description": "LED TV Wall Mount",
+    "supplier_sku": null,
+    "quantity": "2",
+    "unit": null,
+    "pack_size": null,
+    "unit_price": "500.00",
+    "line_total": "1000.00",
+    "vat_rate": "18"
+   },
+   {
+    "description": "Free Installation Service (for TV)",
+    "supplier_sku": null,
+    "quantity": "2",
+    "unit": null,
+    "pack_size": null,
+    "unit_price": "0.00",
+    "line_total": "0.00",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Consultation on Product Placement",
+    "supplier_sku": null,
+    "quantity": "1",
+    "unit": null,
+    "pack_size": null,
+    "unit_price": "5000.00",
+    "line_total": "5000.00",
+    "vat_rate": "0"
+   }
+  ],
+  "subtotal": "56000.00",
+  "vat_total": "9180.00",
+  "total": "65180.00",
+  "field_confidence": {
+   "invoice_number": 0.99,
+   "invoice_date": 0.98,
+   "total": 0.99,
+   "lines": 0.95
+  }
+ },
+ "expected": {
+  "state": "needs_review",
+  "exceptions": [
+   "missing_field",
+   "unknown_supplier"
+  ]
+ }
+}

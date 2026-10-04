@@ -1,0 +1,123 @@
+{
+ "sha256": "0269981f0fd9658ec2d77fddd73f6952304d5a6a7912aec6ba63133a9964ad6a",
+ "filename": "INV-4471.pdf",
+ "classification": {
+  "document_type": "invoice",
+  "confidence": 0.97,
+  "multiple_documents": false,
+  "reason": "Supplier tax invoice with line items, VAT and total"
+ },
+ "extraction": {
+  "supplier": {
+   "name": "Ashworth Meats Ltd",
+   "vat_number": "GB284551237",
+   "address": "Unit 4, Brindle Way, Salford M50 2QP"
+  },
+  "invoice_number": "INV-4471",
+  "invoice_date": "2026-10-02",
+  "delivery_date": "2026-10-02",
+  "due_date": "2026-11-01",
+  "po_reference": "PO-CP1-261002-ASH",
+  "currency": "GBP",
+  "lines": [
+   {
+    "description": "Chicken thigh, boneless skinless",
+    "supplier_sku": "AM-1007",
+    "quantity": "12",
+    "unit": "kg",
+    "pack_size": "5kg case",
+    "unit_price": "7.9",
+    "line_total": "94.80",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Chicken breast fillet",
+    "supplier_sku": "AM-1014",
+    "quantity": "1",
+    "unit": "kg",
+    "pack_size": "5kg case",
+    "unit_price": "7.84",
+    "line_total": "7.84",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Chicken wings, jointed",
+    "supplier_sku": "AM-1021",
+    "quantity": "5",
+    "unit": "kg",
+    "pack_size": "5kg case",
+    "unit_price": "3.99",
+    "line_total": "19.95",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Beef mince 15% fat",
+    "supplier_sku": "AM-1028",
+    "quantity": "16",
+    "unit": "kg",
+    "pack_size": "5kg case",
+    "unit_price": "8.33",
+    "line_total": "133.28",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Beef sirloin steak",
+    "supplier_sku": "AM-1035",
+    "quantity": "7",
+    "unit": "kg",
+    "pack_size": null,
+    "unit_price": "28.72",
+    "line_total": "201.04",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Pork belly, boneless",
+    "supplier_sku": "AM-1042",
+    "quantity": "6",
+    "unit": "kg",
+    "pack_size": null,
+    "unit_price": "8.84",
+    "line_total": "53.04",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Pork sausage, butcher's",
+    "supplier_sku": "AM-1049",
+    "quantity": "2",
+    "unit": "case",
+    "pack_size": "60 x 67g",
+    "unit_price": "21.27",
+    "line_total": "42.54",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Smoked back bacon",
+    "supplier_sku": "AM-1056",
+    "quantity": "2",
+    "unit": "kg",
+    "pack_size": "2.27kg pack",
+    "unit_price": "9.15",
+    "line_total": "18.30",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Lamb shoulder, boneless",
+    "supplier_sku": "AM-1063",
+    "quantity": "5",
+    "unit": "kg",
+    "pack_size": null,
+    "unit_price": "12.55",
+    "line_total": "62.75",
+    "vat_rate": "0"
+   }
+  ],
+  "subtotal": "633.54",
+  "vat_total": "0.00",
+  "total": "633.54",
+  "field_confidence": {
+   "invoice_number": 0.99,
+   "total": 0.99,
+   "lines": 0.97
+  }
+ }
+}

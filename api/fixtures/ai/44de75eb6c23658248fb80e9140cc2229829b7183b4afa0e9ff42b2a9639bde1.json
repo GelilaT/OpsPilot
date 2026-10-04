@@ -1,0 +1,11 @@
+{
+ "sha256": "44de75eb6c23658248fb80e9140cc2229829b7183b4afa0e9ff42b2a9639bde1",
+ "filename": "castlefield-statement.pdf",
+ "classification": {
+  "document_type": "statement",
+  "confidence": 0.95,
+  "multiple_documents": false,
+  "reason": "Statement of account listing several invoices; not a VAT invoice"
+ },
+ "extraction": null
+}

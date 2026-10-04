@@ -1,0 +1,153 @@
+{
+ "sha256": "45e1e7cc3c805d1b40f1309851e16aaa4dadc16f63fe855b7f991f370d112b34",
+ "filename": "NK-LDS-produce-22750.pdf",
+ "classification": {
+  "document_type": "invoice",
+  "confidence": 0.97,
+  "multiple_documents": false,
+  "reason": "Supplier tax invoice with line items, VAT and total"
+ },
+ "extraction": {
+  "supplier": {
+   "name": "Kirkgate Market Produce",
+   "vat_number": "GB644781502",
+   "address": "Kirkgate Market, Leeds LS2 7HY"
+  },
+  "invoice_number": "22750",
+  "invoice_date": "2026-10-02",
+  "delivery_date": "2026-10-02",
+  "due_date": "2026-10-16",
+  "po_reference": "PO-NK-LDS-261002-KMP",
+  "currency": "GBP",
+  "lines": [
+   {
+    "description": "Cos lettuce",
+    "supplier_sku": "KMP1007",
+    "quantity": "1",
+    "unit": "case",
+    "pack_size": "12 heads",
+    "unit_price": "10.11",
+    "line_total": "10.11",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Mixed salad leaves",
+    "supplier_sku": "KMP1014",
+    "quantity": "3",
+    "unit": "kg",
+    "pack_size": "1kg bag",
+    "unit_price": "6.57",
+    "line_total": "19.71",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Tomatoes, vine",
+    "supplier_sku": "KMP1021",
+    "quantity": "5",
+    "unit": "kg",
+    "pack_size": "6kg box",
+    "unit_price": "2.36",
+    "line_total": "11.80",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Red onions",
+    "supplier_sku": "KMP1028",
+    "quantity": "1",
+    "unit": "kg",
+    "pack_size": "10kg sack",
+    "unit_price": "1.14",
+    "line_total": "1.14",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Brown onions",
+    "supplier_sku": "KMP1035",
+    "quantity": "2",
+    "unit": "kg",
+    "pack_size": "25kg sack",
+    "unit_price": "0.91",
+    "line_total": "1.82",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Potatoes, Maris Piper",
+    "supplier_sku": "KMP1049",
+    "quantity": "8",
+    "unit": "kg",
+    "pack_size": "25kg sack",
+    "unit_price": "0.63",
+    "line_total": "5.04",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Chestnut mushrooms",
+    "supplier_sku": "KMP1056",
+    "quantity": "7",
+    "unit": "kg",
+    "pack_size": "2.5kg punnet",
+    "unit_price": "5.36",
+    "line_total": "37.52",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Red peppers",
+    "supplier_sku": "KMP1063",
+    "quantity": "1",
+    "unit": "kg",
+    "pack_size": "5kg box",
+    "unit_price": "3.62",
+    "line_total": "3.62",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Avocados, ripe",
+    "supplier_sku": "KMP1070",
+    "quantity": "2",
+    "unit": "case",
+    "pack_size": "20 avocados",
+    "unit_price": "16.8",
+    "line_total": "33.60",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Lemons",
+    "supplier_sku": "KMP1077",
+    "quantity": "1",
+    "unit": "case",
+    "pack_size": "80 lemons",
+    "unit_price": "15.82",
+    "line_total": "15.82",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Baby spinach",
+    "supplier_sku": "KMP1105",
+    "quantity": "1",
+    "unit": "kg",
+    "pack_size": "1kg bag",
+    "unit_price": "7.29",
+    "line_total": "7.29",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Mixed berries",
+    "supplier_sku": "KMP1112",
+    "quantity": "3",
+    "unit": "kg",
+    "pack_size": "2kg box",
+    "unit_price": "10.63",
+    "line_total": "31.89",
+    "vat_rate": "0"
+   }
+  ],
+  "subtotal": "179.36",
+  "vat_total": "0.00",
+  "total": "179.36",
+  "field_confidence": {
+   "invoice_number": 0.99,
+   "total": 0.99,
+   "lines": 0.97
+  }
+ }
+}

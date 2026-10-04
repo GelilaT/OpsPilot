@@ -1,0 +1,73 @@
+{
+ "sha256": "ae855be3c83102f17e7e9ecef58945a828e9cdae48b421d746fe8035b4066ff2",
+ "filename": "SIM-261002-8942.pdf",
+ "classification": {
+  "document_type": "invoice",
+  "confidence": 0.97,
+  "multiple_documents": false,
+  "reason": "Synthetic supplier invoice"
+ },
+ "extraction": {
+  "supplier": {
+   "name": "Kirkstall Butchers",
+   "vat_number": "GB561203384",
+   "address": "Abbey Road, Kirkstall, Leeds LS5 3HP"
+  },
+  "invoice_number": "SIM-261002-8942",
+  "invoice_date": "2026-10-02",
+  "delivery_date": "2026-10-02",
+  "due_date": "2026-11-01",
+  "po_reference": null,
+  "currency": "GBP",
+  "lines": [
+   {
+    "description": "Chicken thigh, boneless skinless",
+    "supplier_sku": "KB1021",
+    "quantity": "3",
+    "unit": "kg",
+    "pack_size": "5kg case",
+    "unit_price": "8.53",
+    "line_total": "25.59",
+    "vat_rate": "0.0000"
+   },
+   {
+    "description": "Chicken breast fillet",
+    "supplier_sku": "KB1028",
+    "quantity": "2",
+    "unit": "kg",
+    "pack_size": "5kg case",
+    "unit_price": "8.88",
+    "line_total": "17.76",
+    "vat_rate": "0.0000"
+   },
+   {
+    "description": "Pork sausage, butcher's",
+    "supplier_sku": "KB1042",
+    "quantity": "1",
+    "unit": "case",
+    "pack_size": "60 x 67g",
+    "unit_price": "25.29",
+    "line_total": "25.29",
+    "vat_rate": "0.0000"
+   },
+   {
+    "description": "Smoked back bacon",
+    "supplier_sku": "KB1049",
+    "quantity": "2",
+    "unit": "kg",
+    "pack_size": "2.27kg pack",
+    "unit_price": "10.65",
+    "line_total": "21.30",
+    "vat_rate": "0.0000"
+   }
+  ],
+  "subtotal": "89.94",
+  "vat_total": "0.00",
+  "total": "89.94",
+  "field_confidence": {
+   "invoice_number": 0.99,
+   "total": 0.99,
+   "lines": 0.97
+  }
+ }
+}

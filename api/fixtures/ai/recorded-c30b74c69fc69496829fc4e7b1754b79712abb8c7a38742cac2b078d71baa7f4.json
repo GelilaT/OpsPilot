@@ -1,0 +1,15 @@
+{
+ "sha256": "c30b74c69fc69496829fc4e7b1754b79712abb8c7a38742cac2b078d71baa7f4",
+ "filename": "3-star-repair-credit-memo.jpg",
+ "source": "hand-recorded from the document",
+ "classification": {
+  "document_type": "credit_note",
+  "confidence": 0.95,
+  "multiple_documents": false,
+  "reason": "Titled CREDIT MEMO with a credit memo number; not a supplier invoice"
+ },
+ "extraction": null,
+ "expected": {
+  "state": "not_invoice"
+ }
+}

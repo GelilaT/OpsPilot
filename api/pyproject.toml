@@ -1,0 +1,104 @@
+[project]
+name = "opspilot-api"
+version = "0.1.0"
+description = "OpsPilot v2 - AI restaurant operations and margin management API"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "sqlalchemy[asyncio]>=2.0",
+    "alembic>=1.13",
+    "psycopg[binary,pool]>=3.2",
+    "procrastinate>=3.0",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "pyjwt[crypto]>=2.8",
+    "httpx>=0.27",
+    "python-multipart>=0.0.9",
+    "email-validator>=2.1",
+    "google-genai>=1.0",
+    "google-cloud-storage>=2.16",
+    "google-cloud-secret-manager>=2.20",
+    "reportlab>=4.0",
+    "pymupdf>=1.24",
+    "pillow>=10.3",
+    "pillow-heif>=0.16",
+    "rapidfuzz>=3.6",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+exclude = ["tests*"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "hypothesis>=6",
+    "ruff>=0.5",
+    "pyright>=1.1.370",
+    "import-linter>=2.0",
+]
+
+[tool.ruff]
+line-length = 130
+target-version = "py312"
+extend-exclude = ["migrations/versions"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "ASYNC", "RUF"]
+ignore = ["B008", "RUF012"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["E501", "ASYNC240"]
+"app/domain/notifications/email_format.py" = ["E501"]  # inline-styled HTML email templates
+
+[tool.pyright]
+include = ["app"]
+pythonVersion = "3.13"
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "basic"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
+testpaths = ["tests"]
+markers = ["integration: needs PostgreSQL (TEST_DATABASE_URL)"]
+filterwarnings = ["ignore:builtin type .* has no __module__ attribute:DeprecationWarning"]
+
+[tool.importlinter]
+root_package = "app"
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "Layering: api -> domain -> ports (SRS 4.1)"
+type = "layers"
+layers = ["app.api", "app.workers", "app.domain", "app.ports"]
+
+[[tool.importlinter.contracts]]
+name = "Domain and ports never import web frameworks, HTTP clients or vendor SDKs (FR-INT-01)"
+type = "forbidden"
+source_modules = ["app.domain", "app.ports", "app.core"]
+forbidden_modules = ["fastapi", "starlette", "httpx", "google", "sendgrid", "app.adapters", "app.api"]
+ignore_imports = [
+    "app.core.security -> httpx",
+    "app.core.errors -> fastapi",
+    "app.core.errors -> starlette",
+    "app.core.idempotency -> starlette",
+    "app.core.logging -> starlette",
+]
+
+[[tool.importlinter.contracts]]
+name = "Adapters are reached only through ports and the registry"
+type = "forbidden"
+source_modules = ["app.domain", "app.workers"]
+forbidden_modules = ["app.adapters"]
+allow_indirect_imports = true
+ignore_imports = ["app.workers.app -> app.adapters"]  # composition root registers adapters at start-up

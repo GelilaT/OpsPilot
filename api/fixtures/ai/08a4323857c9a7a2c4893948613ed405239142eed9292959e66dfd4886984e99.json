@@ -1,0 +1,113 @@
+{
+ "sha256": "08a4323857c9a7a2c4893948613ed405239142eed9292959e66dfd4886984e99",
+ "filename": "NK-LDS-two-invoices.pdf",
+ "classification": {
+  "document_type": "invoice",
+  "confidence": 0.82,
+  "multiple_documents": true,
+  "reason": "File contains two separate supplier invoices"
+ },
+ "extraction": {
+  "supplier": {
+   "name": "Kirkstall Butchers",
+   "vat_number": "GB561203384",
+   "address": "Abbey Road, Kirkstall, Leeds LS5 3HP"
+  },
+  "invoice_number": "44875",
+  "invoice_date": "2026-10-02",
+  "delivery_date": "2026-10-02",
+  "due_date": "2026-11-01",
+  "po_reference": "PO-NK-LDS-261002-KIR",
+  "currency": "GBP",
+  "lines": [
+   {
+    "description": "Beef burger patty 6oz",
+    "supplier_sku": "KB1007",
+    "quantity": "5",
+    "unit": "case",
+    "pack_size": "48 x 170g",
+    "unit_price": "60.96",
+    "line_total": "304.80",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Beef mince 15% fat",
+    "supplier_sku": "KB1014",
+    "quantity": "2",
+    "unit": "kg",
+    "pack_size": "5kg case",
+    "unit_price": "7.87",
+    "line_total": "15.74",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Chicken thigh, boneless skinless",
+    "supplier_sku": "KB1021",
+    "quantity": "7",
+    "unit": "kg",
+    "pack_size": "5kg case",
+    "unit_price": "6.82",
+    "line_total": "47.74",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Chicken breast fillet",
+    "supplier_sku": "KB1028",
+    "quantity": "10",
+    "unit": "kg",
+    "pack_size": "5kg case",
+    "unit_price": "7.1",
+    "line_total": "71.00",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Chicken wings, jointed",
+    "supplier_sku": "KB1035",
+    "quantity": "7",
+    "unit": "kg",
+    "pack_size": "5kg case",
+    "unit_price": "3.86",
+    "line_total": "27.02",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Pork sausage, butcher's",
+    "supplier_sku": "KB1042",
+    "quantity": "2",
+    "unit": "case",
+    "pack_size": "60 x 67g",
+    "unit_price": "20.23",
+    "line_total": "40.46",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Smoked back bacon",
+    "supplier_sku": "KB1049",
+    "quantity": "8",
+    "unit": "kg",
+    "pack_size": "2.27kg pack",
+    "unit_price": "8.52",
+    "line_total": "68.16",
+    "vat_rate": "0"
+   },
+   {
+    "description": "Black pudding",
+    "supplier_sku": "KB1056",
+    "quantity": "2",
+    "unit": "kg",
+    "pack_size": null,
+    "unit_price": "6.21",
+    "line_total": "12.42",
+    "vat_rate": "0"
+   }
+  ],
+  "subtotal": "587.34",
+  "vat_total": "0.00",
+  "total": "587.34",
+  "field_confidence": {
+   "invoice_number": 0.99,
+   "total": 0.99,
+   "lines": 0.97
+  }
+ }
+}
