@@ -1,0 +1,29 @@
+[
+ {
+  "file": "INV-4471.pdf",
+  "sha256": "0269981f0fd9658ec2d77fddd73f6952304d5a6a7912aec6ba63133a9964ad6a",
+  "description": "S1/S2: Ashworth Meats - chicken thigh 7.90/kg (+18%), 12 kg delivered against a 20 kg PO",
+  "supplier": "Ashworth Meats Ltd",
+  "number": "INV-4471",
+  "total": "633.54",
+  "scenario": "S1,S2",
+  "upload_order": 1,
+  "note": "Upload this file twice to see the exact duplicate (S4, SHA-256)."
+ },
+ {
+  "file": "INV-4471-photo.jpg",
+  "sha256": "e01bd3e2a3e18d845a286f9cfe89efb114eaf8c114158192fd824cc6aed7f529",
+  "description": "S4: the same invoice re-photographed (possible_duplicate: same supplier and number)",
+  "supplier": "Ashworth Meats Ltd",
+  "number": "INV-4471",
+  "scenario": "S4",
+  "upload_order": 3
+ },
+ {
+  "file": "castlefield-statement.pdf",
+  "sha256": "44de75eb6c23658248fb80e9140cc2229829b7183b4afa0e9ff42b2a9639bde1",
+  "description": "Not an invoice: a supplier statement (ends in not_invoice)",
+  "supplier": "Castlefield Foodservice",
+  "upload_order": 4
+ }
+]

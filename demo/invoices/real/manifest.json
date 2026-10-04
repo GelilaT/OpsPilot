@@ -1,0 +1,22 @@
+[
+ {
+  "file": "3-star-repair-credit-memo.jpg",
+  "sha256": "c30b74c69fc69496829fc4e7b1754b79712abb8c7a38742cac2b078d71baa7f4",
+  "description": "Real-world sample supplied by the product owner",
+  "expected": {
+   "state": "not_invoice"
+  }
+ },
+ {
+  "file": "mixed-invoice-inr.webp",
+  "sha256": "b96f1f800a2c65d99437c7df3600cc44af874dad2a8a9f669bd44abc14b881c8",
+  "description": "Real-world sample supplied by the product owner",
+  "expected": {
+   "state": "needs_review",
+   "exceptions": [
+    "missing_field",
+    "unknown_supplier"
+   ]
+  }
+ }
+]

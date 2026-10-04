@@ -1,0 +1,33 @@
+[
+ {
+  "file": "NK-LDS-produce-22750.pdf",
+  "sha256": "45e1e7cc3c805d1b40f1309851e16aaa4dadc16f63fe855b7f991f370d112b34",
+  "description": "Leeds: today's produce invoice (compact layout)",
+  "supplier": "Kirkgate Market Produce",
+  "number": "22750",
+  "total": "179.36",
+  "site": "NK-LDS",
+  "upload_order": 1
+ },
+ {
+  "file": "NK-YRK-dairy-SI-21595.pdf",
+  "sha256": "9c587c646c545da3dea412909f73e4b86f6e8e334fb7b7151ce6b31fdd3b32d3",
+  "description": "York: today's dairy invoice (modern layout)",
+  "supplier": "Wharfedale Dairy",
+  "number": "SI-21595",
+  "total": "184.59",
+  "site": "NK-YRK",
+  "upload_order": 1
+ },
+ {
+  "file": "NK-LDS-two-invoices.pdf",
+  "sha256": "08a4323857c9a7a2c4893948613ed405239142eed9292959e66dfd4886984e99",
+  "description": "Leeds: one file with two invoices (multiple_documents -> needs_review)",
+  "site": "NK-LDS",
+  "numbers": [
+   "44875",
+   "INV24999"
+  ],
+  "upload_order": 2
+ }
+]
