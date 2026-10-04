@@ -1,0 +1,29 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.import_linter_cache/
+.hypothesis/
+*.egg-info/
+
+# Node
+node_modules/
+.next/
+out/
+
+# Env and secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Local storage for invoice originals (StoragePort local adapter)
+var/
+.claude/launch.json

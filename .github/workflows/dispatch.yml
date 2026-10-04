@@ -1,0 +1,16 @@
+# Calls the API's scheduler tick every 5 minutes (FR-JOB-05): nightly pipeline, outcomes, morning brief,
+# Monday weekly recap, follow-ups. Needs repo secrets API_URL (e.g. https://opspilot-api.onrender.com) and CRON_SECRET.
+name: dispatch
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl --fail-with-body -sS -X POST "${{ secrets.API_URL }}/internal/dispatch" \
+            -H "X-Cron-Secret: ${{ secrets.CRON_SECRET }}" -H "Content-Type: application/json" -d '{}'
