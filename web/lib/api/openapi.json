@@ -5189,6 +5189,8 @@
       "required": false,
       "schema": {
        "type": "integer",
+       "maximum": 100,
+       "minimum": 1,
        "default": 20,
        "title": "Limit"
       }
@@ -5237,6 +5239,87 @@
           "$ref": "#/components/schemas/DeliveryOut"
          },
          "title": "Response Deliveries Api V1 Notifications Deliveries Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/api/v1/notifications/deliveries/{delivery_id}/html": {
+   "get": {
+    "tags": [
+     "notifications"
+    ],
+    "summary": "Delivery Html",
+    "description": "Preview the styled HTML body (same as recipients see in HTML-capable clients).",
+    "operationId": "delivery_html_api_v1_notifications_deliveries__delivery_id__html_get",
+    "security": [
+     {
+      "HTTPBearer": []
+     }
+    ],
+    "parameters": [
+     {
+      "name": "delivery_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "format": "uuid",
+       "title": "Delivery Id"
+      }
+     },
+     {
+      "name": "site_id",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Site Id"
+      }
+     },
+     {
+      "name": "x-site-id",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "X-Site-Id"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "text/html": {
+        "schema": {
+         "type": "string"
         }
        }
       }
