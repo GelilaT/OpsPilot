@@ -1,0 +1,63 @@
+{
+ "sha256": "9936dd476de038eb339a57a18632dcd1c3209e36af90dd531f7e5ffe968c35f8",
+ "filename": "SIM-261002-8612.pdf",
+ "classification": {
+  "document_type": "invoice",
+  "confidence": 0.97,
+  "multiple_documents": false,
+  "reason": "Synthetic supplier invoice"
+ },
+ "extraction": {
+  "supplier": {
+   "name": "Aire Valley Foodservice",
+   "vat_number": "GB738120046",
+   "address": "Aire Valley Business Park, Bradford BD4 6RS"
+  },
+  "invoice_number": "SIM-261002-8612",
+  "invoice_date": "2026-10-02",
+  "delivery_date": "2026-10-02",
+  "due_date": "2026-11-01",
+  "po_reference": null,
+  "currency": "GBP",
+  "lines": [
+   {
+    "description": "Flour tortilla wraps 12in",
+    "supplier_sku": "AVF-1021",
+    "quantity": "2",
+    "unit": "pack",
+    "pack_size": "18 wraps",
+    "unit_price": "5.10",
+    "line_total": "10.20",
+    "vat_rate": "0.0000"
+   },
+   {
+    "description": "Panko breadcrumbs",
+    "supplier_sku": "AVF-1042",
+    "quantity": "6",
+    "unit": "kg",
+    "pack_size": "1kg bag",
+    "unit_price": "4.94",
+    "line_total": "29.64",
+    "vat_rate": "0.0000"
+   },
+   {
+    "description": "Sweet potato fries, frozen",
+    "supplier_sku": "AVF-1126",
+    "quantity": "2",
+    "unit": "kg",
+    "pack_size": "4 x 2.5kg",
+    "unit_price": "3.80",
+    "line_total": "7.60",
+    "vat_rate": "0.0000"
+   }
+  ],
+  "subtotal": "47.44",
+  "vat_total": "0.00",
+  "total": "47.44",
+  "field_confidence": {
+   "invoice_number": 0.99,
+   "total": 0.99,
+   "lines": 0.97
+  }
+ }
+}

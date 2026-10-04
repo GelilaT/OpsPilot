@@ -66,6 +66,9 @@ class Settings(BaseSettings):
     storage_signing_secret: str = "dev-only-storage-signing-secret"
     public_api_url: str = "http://localhost:8000"
 
+    # Run the job worker inside the API process (single-service hosting). Leave off when a worker service exists.
+    run_worker: bool = False
+
     ai_fixtures_dir: str = "fixtures/ai"
     demo_dir: str = "../demo"
 

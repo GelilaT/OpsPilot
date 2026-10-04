@@ -1,0 +1,93 @@
+{
+ "sha256": "730b73d2899809fdd1457d77d88342240680cf705f66a84dccbf0ec1326b6d76",
+ "filename": "SIM-261002-2934.pdf",
+ "classification": {
+  "document_type": "invoice",
+  "confidence": 0.97,
+  "multiple_documents": false,
+  "reason": "Synthetic supplier invoice"
+ },
+ "extraction": {
+  "supplier": {
+   "name": "Calder Drinks Wholesale",
+   "vat_number": "GB790033128",
+   "address": "Calder Wharf, Wakefield WF1 5PW"
+  },
+  "invoice_number": "SIM-261002-2934",
+  "invoice_date": "2026-10-02",
+  "delivery_date": "2026-10-02",
+  "due_date": "2026-11-01",
+  "po_reference": null,
+  "currency": "GBP",
+  "lines": [
+   {
+    "description": "Lemonade 330ml can",
+    "supplier_sku": "CDW1014",
+    "quantity": "2",
+    "unit": "case",
+    "pack_size": "24 cans",
+    "unit_price": "11.71",
+    "line_total": "23.42",
+    "vat_rate": "20.0000"
+   },
+   {
+    "description": "Orange juice, fresh",
+    "supplier_sku": "CDW1021",
+    "quantity": "2",
+    "unit": "l",
+    "pack_size": "6 x 1l",
+    "unit_price": "2.65",
+    "line_total": "5.30",
+    "vat_rate": "20.0000"
+   },
+   {
+    "description": "Lager 330ml bottle",
+    "supplier_sku": "CDW1028",
+    "quantity": "5",
+    "unit": "case",
+    "pack_size": "24 bottles",
+    "unit_price": "30.13",
+    "line_total": "150.65",
+    "vat_rate": "20.0000"
+   },
+   {
+    "description": "Breakfast tea bags",
+    "supplier_sku": "CDW1042",
+    "quantity": "1",
+    "unit": "box",
+    "pack_size": "1100 bags",
+    "unit_price": "28.06",
+    "line_total": "28.06",
+    "vat_rate": "20.0000"
+   },
+   {
+    "description": "Rapeseed frying oil",
+    "supplier_sku": "CDW1049",
+    "quantity": "6",
+    "unit": "l",
+    "pack_size": "20l drum",
+    "unit_price": "2.15",
+    "line_total": "12.90",
+    "vat_rate": "0.0000"
+   },
+   {
+    "description": "Caster sugar",
+    "supplier_sku": "CDW1056",
+    "quantity": "3",
+    "unit": "kg",
+    "pack_size": "5kg bag",
+    "unit_price": "1.40",
+    "line_total": "4.20",
+    "vat_rate": "0.0000"
+   }
+  ],
+  "subtotal": "224.53",
+  "vat_total": "41.49",
+  "total": "266.02",
+  "field_confidence": {
+   "invoice_number": 0.99,
+   "total": 0.99,
+   "lines": 0.97
+  }
+ }
+}

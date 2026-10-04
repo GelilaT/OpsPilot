@@ -1,5 +1,8 @@
 """App factory: middleware (request id, body limits, idempotency, CORS), error handlers, routers."""
 
+import asyncio
+import contextlib
+import logging
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 
@@ -70,6 +73,23 @@ class BodyLimitMiddleware:
         await self.app(scope, limited, send)
 
 
+async def _embedded_worker() -> None:
+    """Run the Procrastinate worker in this process (RUN_WORKER=1); restart it if it ever stops."""
+    from app.workers.app import app as job_app
+
+    log = logging.getLogger("opspilot.worker")
+    while True:
+        try:
+            log.info("starting embedded job worker")
+            async with job_app.open_async():
+                await job_app.run_worker_async(install_signal_handlers=False)
+        except asyncio.CancelledError:
+            raise
+        except Exception:
+            log.exception("embedded job worker stopped; restarting in 5s")
+        await asyncio.sleep(5)
+
+
 def create_app(settings: Settings | None = None, *, user_verifier: TokenVerifier | None = None) -> FastAPI:
     settings = settings or get_settings()
     configure_logging(settings.log_level)
@@ -77,7 +97,12 @@ def create_app(settings: Settings | None = None, *, user_verifier: TokenVerifier
 
     @asynccontextmanager
     async def lifespan(_: FastAPI) -> AsyncIterator[None]:
+        worker = asyncio.create_task(_embedded_worker()) if settings.run_worker else None
         yield
+        if worker:
+            worker.cancel()
+            with contextlib.suppress(asyncio.CancelledError):
+                await worker
         await dispose_engine()
 
     app = FastAPI(
