@@ -24,6 +24,7 @@ dependencies = [
     "pillow>=10.3",
     "pillow-heif>=0.16",
     "rapidfuzz>=3.6",
+    "pgvector>=0.3",
 ]
 
 [build-system]
