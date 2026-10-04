@@ -104,7 +104,7 @@ def _metrics_html(metrics: list[Metric]) -> str:
     for i in range(0, len(cells), 2):
         pair = cells[i : i + 2]
         if len(pair) == 1:
-            pair.append(f'<td width="50%" style="padding:6px;"></td>')
+            pair.append('<td width="50%" style="padding:6px;"></td>')
         rows += f"<tr>{''.join(pair)}</tr>"
     return f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0">{rows}</table>'
 
